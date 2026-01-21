@@ -11,9 +11,15 @@ if (!mongoUri) {
     throw new Error("MONGO_URI is undefined");
 }
 
+const jwtToken = String(process.env.JWT_TOKEN);
+if (!jwtToken) {
+    throw new Error("JWT_TOKEN is undefined");
+}
+
 const envObj = Object.freeze({
     port,
     mongoUri,
+    jwtToken,
 });
 
 export default envObj;

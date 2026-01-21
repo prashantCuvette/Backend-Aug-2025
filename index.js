@@ -2,9 +2,11 @@ import express from "express";
 import envObj from "./src/configs/env.config.js";
 import connectToDatabase from "./src/configs/db.config.js";
 import userRouter from "./src/routes/user.route.js";
+import cookieParser from "cookie-parser";
 
 const app = express();
 app.use(express.json()); // for reading data from body
+app.use(cookieParser());
 
 
 app.get("/", (req, res) => {
