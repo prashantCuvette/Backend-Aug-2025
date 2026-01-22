@@ -3,6 +3,7 @@ import envObj from "./src/configs/env.config.js";
 import connectToDatabase from "./src/configs/db.config.js";
 import userRouter from "./src/routes/user.route.js";
 import cookieParser from "cookie-parser";
+import memoryRouter from "./src/routes/memory.route.js";
 
 const app = express();
 app.use(express.json()); // for reading data from body
@@ -15,6 +16,7 @@ app.get("/", (req, res) => {
 
 
 app.use("/api/v1/users", userRouter);
+app.use("/api/v1/memories", memoryRouter);
 
 // POST   => http://localhost:3000/api/v1/users/
 // GET    => http://localhost:3000/api/v1/users/

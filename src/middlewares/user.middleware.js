@@ -33,17 +33,3 @@ export const authenticateUser = (req, res, next) => {
         });
     }
 }
-
-
-req = {
-    rekey: value,
-}
-
-
-req = {
-    rekey: value,
-    user: {
-        _id,
-        email
-    }
-}
