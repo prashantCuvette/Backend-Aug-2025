@@ -33,3 +33,4 @@ export const authenticateUser = (req, res, next) => {
         });
     }
 }
+

@@ -16,10 +16,29 @@ if (!jwtToken) {
     throw new Error("JWT_TOKEN is undefined");
 }
 
+const cloudinaryCloudName = String(process.env.CLOUDINARY_CLOUD_NAME);
+if (!cloudinaryCloudName) {
+    throw new Error("CLOUDINARY_CLOUD_NAME is undefined");
+}
+
+const cloudinaryApiKey = String(process.env.CLOUDINARY_API_KEY);
+if (!cloudinaryApiKey) {
+    throw new Error("CLOUDINARY_CLOUD_NAME is undefined");
+}
+
+const cloudinaryApiSecret = String(process.env.CLOUDINARY_API_SECRET);
+if (!cloudinaryApiSecret) {
+    throw new Error("CLOUDINARY_CLOUD_NAME is undefined");
+}
+
+
 const envObj = Object.freeze({
     port,
     mongoUri,
     jwtToken,
+    cloudinaryCloudName,
+    cloudinaryApiKey,
+    cloudinaryApiSecret,
 });
 
 export default envObj;
