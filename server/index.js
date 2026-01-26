@@ -4,10 +4,15 @@ import connectToDatabase from "./src/configs/db.config.js";
 import userRouter from "./src/routes/user.route.js";
 import cookieParser from "cookie-parser";
 import memoryRouter from "./src/routes/memory.route.js";
+import cors from "cors";
 
 const app = express();
 app.use(express.json()); // for reading data from body
 app.use(cookieParser());
+app.use(cors({
+    origin: envObj.clientUrl,
+    credentials: true,
+}));
 
 
 app.get("/", (req, res) => {

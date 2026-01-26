@@ -31,6 +31,11 @@ if (!cloudinaryApiSecret) {
     throw new Error("CLOUDINARY_CLOUD_NAME is undefined");
 }
 
+const clientUrl = String(process.env.CLIENT_URL);
+if (!clientUrl) {
+    throw new Error("CLIENT_URL is undefined");
+}
+
 
 const envObj = Object.freeze({
     port,
@@ -39,6 +44,7 @@ const envObj = Object.freeze({
     cloudinaryCloudName,
     cloudinaryApiKey,
     cloudinaryApiSecret,
+    clientUrl,
 });
 
 export default envObj;

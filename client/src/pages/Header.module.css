@@ -1,0 +1,28 @@
+.header {
+  height: 64px;
+  padding: 0 1.5rem;
+  background: #111827;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.profileBtn {
+  background: #2563eb;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.profileBtn:hover {
+  background: #1e4ed8;
+}

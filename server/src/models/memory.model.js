@@ -19,6 +19,11 @@ const memorySchema = new Schema(
             required: true,
             trim: true,
         },
+        imagePublidId: {
+            type: String,
+            required: true,
+            trim: true,
+        },
         userId: {
             type: Schema.Types.ObjectId,
             ref: "user",

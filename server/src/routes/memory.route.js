@@ -5,11 +5,11 @@ import { upload } from "../middlewares/multer.middleware.js";
 
 const memoryRouter = Router();
 
-// memoryRouter.use(authenticateUser);
+memoryRouter.use(authenticateUser);
 
-memoryRouter.get("/", getMemory);
-memoryRouter.post("/", upload.single("fileName"), createMemory);
-memoryRouter.patch("/", updateMemory);
-memoryRouter.delete("/", deleteMemory);
+memoryRouter.post("/", upload.single("image"), createMemory);
+memoryRouter.patch("/:memoriesId", upload.single("image"), updateMemory);
+memoryRouter.delete("/:memoriesId", deleteMemory);
+memoryRouter.get("/:memoriesId", getMemory); // always write dynamic path at last
 
 export default memoryRouter;
